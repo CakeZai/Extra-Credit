@@ -132,6 +132,23 @@
     rail.scrollBy({ left: step * Number(b.dataset.dir), behavior: reduceMotion ? "auto" : "smooth" });
   }));
 
+  /* ---------- FAQ: expand / collapse all ---------- */
+  const expandAll = $(".expand-all");
+  if (expandAll) {
+    const faqs = $$("#faqList details");
+    const sync = () => {
+      const allOpen = faqs.every(d => d.open);
+      expandAll.textContent = allOpen ? "Collapse all" : "Expand all";
+      expandAll.setAttribute("aria-expanded", String(allOpen));
+    };
+    expandAll.addEventListener("click", () => {
+      const open = !faqs.every(d => d.open);
+      faqs.forEach(d => { d.open = open; });
+      sync();
+    });
+    faqs.forEach(d => d.addEventListener("toggle", sync));
+  }
+
   /* ---------- Next start term countdown ---------- */
   // Full-time master's deadlines (McKelvey): Early decision Dec 31 → Fall of next year,
   // Fall regular Mar 1 → Fall same year, Spring Oct 1 → Spring of next year. 11:59 p.m. ET.

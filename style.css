@@ -615,3 +615,4 @@ p { margin: 0 0 1em; }
 .content .sec > p.big { max-width: 46em; }
 .hero__inner { grid-template-columns: 1.1fr .9fr; }
 @media (max-width: 920px) { .layout { grid-template-columns: minmax(0, 1fr); padding-top: 0; } }
+@media (max-width: 920px) { .cta-row .arrowlink { min-height: 44px; } }
