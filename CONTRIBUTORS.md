@@ -2,7 +2,7 @@
 
 ## Author
 
-**Mary Ashley Barredo**: design direction, content decisions, review and testing.
+**Zai**: design direction, content decisions, review and testing.
 Fall 2026 web development course, Washington University in St. Louis.
 
 ## Tools and assistance

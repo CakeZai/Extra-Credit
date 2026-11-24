@@ -77,9 +77,9 @@
   <link rel="icon" type="image/png" sizes="any" href="https://engineering.washu.edu/_files/images/shield_favicon_512.png">
 </head>
 <body>
-<a class="skip" href="#main">Skip to main content</a>
+<a class="skip-link" href="#main">Skip to main content</a>
 
-<!-- ============ HEADER ============ -->
+<!-- ==================== Header ==================== -->
 <header class="site-header">
   <div class="utility">
     <div class="wrap utility__row">
@@ -91,20 +91,20 @@
       <a href="https://engineering.washu.edu/offices-services/non-academic/industry-relations/index.html">Industry</a>
     </div>
   </div>
-  <div class="wrap brandbar">
+  <div class="wrap brand-bar">
     <a class="brand" href="https://washu.edu" aria-label="Washington University in St. Louis">
       <img src="https://engineering.washu.edu/_files/images/WashU-RGB.svg" alt="Washington University in St. Louis" width="220" height="52">
     </a>
     <div class="brand__units">
       <a href="https://engineering.washu.edu/">McKelvey School of Engineering</a>
-      <a class="brand__dept" href="https://cse.washu.edu/">Computer Science &amp; Engineering</a>
+      <a class="brand__department" href="https://cse.washu.edu/">Computer Science &amp; Engineering</a>
     </div>
-    <button class="menu-btn" aria-expanded="false" aria-controls="mainnav">
-      <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__txt">Menu</span>
+    <button class="menu-button" aria-expanded="false" aria-controls="main-nav">
+      <span class="menu-button__bars" aria-hidden="true"></span><span class="menu-button__text">Menu</span>
     </button>
   </div>
-  <nav class="mainnav" id="mainnav" aria-label="Department">
-    <div class="wrap mainnav__row">
+  <nav class="main-nav" id="main-nav" aria-label="Department">
+    <div class="wrap main-nav__row">
       <a href="https://cse.washu.edu/academics/index.html" class="is-current">Academics</a>
       <a href="https://cse.washu.edu/faculty-research/index.html">Faculty &amp; Research</a>
       <a href="https://cse.washu.edu/news-events/index.html">News &amp; Events</a>
@@ -115,24 +115,24 @@
 
 <main id="main">
 
-<!-- ============ HERO ============ -->
+<!-- ==================== Hero ==================== -->
 <section class="hero" aria-labelledby="page-title">
   <div class="wrap hero__inner">
     <div class="hero__copy" data-enter>
-      <nav class="crumbs" aria-label="Breadcrumb">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
         <a href="https://cse.washu.edu/academics/index.html">Academics</a>
         <span aria-hidden="true">/</span>
         <a href="https://cse.washu.edu/academics/graduate/index.html">Graduate Programs</a>
         <span aria-hidden="true">/</span>
         <span aria-current="page">Cybersecurity Engineering</span>
       </nav>
-      <h1 id="page-title"><span class="h1-pre">Master of Science in</span> Cybersecurity Engineering</h1>
+      <h1 id="page-title"><span class="hero__degree">Master of Science in</span> Cybersecurity Engineering</h1>
       <p class="hero__lede">Design, engineer and architect the security technology and systems that enterprises around the world depend on.</p>
       <div class="hero__actions">
-        <a class="btn btn--red" href="https://gradadmit.wustl.edu/apply/?sr=4503835c-76a0-44d8-b086-00f19e2bb810">Apply now <svg class="i-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
-        <a class="hero__link" href="https://engineering.washu.edu/academics/graduate-admissions/recruitment-schedule.html#infosessions">Attend an info session <svg class="i-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+        <a class="btn btn--primary" href="https://gradadmit.wustl.edu/apply/?sr=4503835c-76a0-44d8-b086-00f19e2bb810">Apply now <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+        <a class="hero__link" href="https://engineering.washu.edu/academics/graduate-admissions/recruitment-schedule.html#infosessions">Attend an info session <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </div>
-      <p class="hero__perk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8a2 2 0 0 0 2-2h14a2 2 0 0 0 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 0-2 2H5a2 2 0 0 0-2-2v-2a2 2 0 0 0 0-4z"/><path d="M14 6v12" stroke-dasharray="2 2"/></svg><span><strong>Skip the $75 application fee</strong> by attending an eligible info session before you apply.</span></p>
+      <p class="hero__fee-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8a2 2 0 0 0 2-2h14a2 2 0 0 0 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 0-2 2H5a2 2 0 0 0-2-2v-2a2 2 0 0 0 0-4z"/><path d="M14 6v12" stroke-dasharray="2 2"/></svg><span><strong>Skip the $75 application fee</strong> by attending an eligible info session before you apply.</span></p>
     </div>
     <figure class="hero__photo" data-enter>
       <img src="images/students-cybersecurity.jpg" width="1200" height="800" fetchpriority="high" alt="Students working on laptops around a classroom table at WashU">
@@ -142,24 +142,24 @@
   <div class="wrap">
     <dl class="facts">
       <div><dt>Total units</dt><dd>30</dd></div>
-      <div><dt>Electives</dt><dd>6 <small class="facts__sub">of 11 offered</small></dd></div>
-      <div><dt>Study</dt><dd>Full-time <small class="facts__sub">or part-time</small></dd></div>
-      <div><dt>Full-time tuition</dt><dd><a class="facts__link" href="#tuition">$34,595</a> <small class="facts__sub">per semester</small></dd></div>
-      <div><dt>Fall deadline</dt><dd class="facts__date">Mar 1 <small class="facts__sub">full-time</small></dd></div>
-      <div><dt>Spring deadline</dt><dd class="facts__date">Oct 1 <small class="facts__sub">full-time</small></dd></div>
+      <div><dt>Electives</dt><dd>6 <small class="facts__note">of 11 offered</small></dd></div>
+      <div><dt>Study</dt><dd>Full-time <small class="facts__note">or part-time</small></dd></div>
+      <div><dt>Full-time tuition</dt><dd><a class="facts__link" href="#tuition">$34,595</a> <small class="facts__note">per semester</small></dd></div>
+      <div><dt>Fall deadline</dt><dd class="facts__date">Mar 1 <small class="facts__note">full-time</small></dd></div>
+      <div><dt>Spring deadline</dt><dd class="facts__date">Oct 1 <small class="facts__note">full-time</small></dd></div>
     </dl>
   </div>
 </section>
 
-<!-- ============ BODY: TOC + CONTENT ============ -->
-<div class="wrap layout">
+<!-- ==================== Page body: "On this page" sidebar + content ==================== -->
+<div class="wrap page-layout">
 
   <aside class="toc" aria-label="On this page">
-    <button class="toc__toggle" aria-expanded="false" aria-controls="tocList">
-      <span class="toc__lbl">On this page</span><span class="toc__current" id="tocCurrent">Program Overview</span>
+    <button class="toc__toggle" aria-expanded="false" aria-controls="toc-list">
+      <span class="toc__label">On this page</span><span class="toc__current" id="toc-current">Program Overview</span>
       <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
     </button>
-    <div class="toc__panel" id="tocList">
+    <div class="toc__panel" id="toc-list">
       <p class="toc__title">On this page</p>
       <ol>
         <li><a href="#overview">Program Overview</a></li>
@@ -177,28 +177,28 @@
         <li><a href="#explore">Explore More Programs</a></li>
       </ol>
       <a class="toc__apply" href="https://gradadmit.wustl.edu/apply/?sr=4503835c-76a0-44d8-b086-00f19e2bb810">Apply now</a>
-      <a class="toc__info" href="https://gradadmit.wustl.edu/register/Web-Inquiry">Request info</a>
+      <a class="toc__request" href="https://gradadmit.wustl.edu/register/Web-Inquiry">Request info</a>
     </div>
   </aside>
 
-  <div class="content">
+  <div class="page-content">
 
-    <!-- OVERVIEW -->
-    <section id="overview" class="sec">
+    <!-- ---------- Program Overview ---------- -->
+    <section id="overview" class="section">
       <h2>Program Overview</h2>
-      <p class="big">The Master of Science in Cybersecurity Engineering gives students the skills, knowledge and expertise to work in the rapidly growing field of cybersecurity and design, engineer, and architect cybersecurity technology and systems.</p>
+      <p class="lead">The Master of Science in Cybersecurity Engineering gives students the skills, knowledge and expertise to work in the rapidly growing field of cybersecurity and design, engineer, and architect cybersecurity technology and systems.</p>
       <p>Cybersecurity has been and continues to be one of the most growth-oriented career fields in the computer science domain. Graduates of this program will be equipped with the theoretical and hands-on engineering expertise to solve complex cybersecurity problems affecting diverse enterprises worldwide. McKelvey <a href="https://source.washu.edu/2018/03/school-engineering-launches-masters-cybersecurity-engineering-degree/">launched the degree in 2018</a>.</p>
 
       <div class="prereq">
-        <div class="prereq__head">
+        <div class="prereq__header">
           <h3>Before you start: two prerequisites</h3>
           <p>All students must have completed these courses (or equivalents at another institution), test out of them, or complete them at the start of the program:</p>
         </div>
         <ul class="prereq__courses">
-          <li><span class="code">CSE 1301</span> Introduction to Computer Science</li>
-          <li><span class="code">CSE 2407</span> Data Structures and Algorithms</li>
+          <li><span class="course-code">CSE 1301</span> Introduction to Computer Science</li>
+          <li><span class="course-code">CSE 2407</span> Data Structures and Algorithms</li>
         </ul>
-        <ol class="prereq__ways">
+        <ol class="prereq__options">
           <li><strong>Transcript</strong>Documented on your undergraduate transcript.</li>
           <li><strong>Placement exam</strong>Successfully test to place out of the course.</li>
           <li><strong>First term</strong>Complete the courses at the start of your program.</li>
@@ -206,136 +206,136 @@
       </div>
     </section>
 
-    <!-- BENEFITS -->
-    <section id="benefits" class="sec">
+    <!-- ---------- Program Benefits ---------- -->
+    <section id="benefits" class="section">
       <h2>Program Benefits</h2>
-      <ul class="benefits">
+      <ul class="benefit-list">
         <li>
-          <svg class="ico" viewBox="0 0 64 64" aria-hidden="true">
-            <rect x="8" y="12" width="48" height="34" rx="3" class="ico-l"/>
-            <path d="M8 20h48" class="ico-l"/>
-            <circle cx="13" cy="16" r="1.4" class="ico-k"/><circle cx="18" cy="16" r="1.4" class="ico-k"/>
-            <path d="M16 28l6 5-6 5M26 38h8" class="ico-l"/>
-            <path d="M24 56h16M32 46v10" class="ico-l"/>
-            <rect x="40" y="26" width="10" height="13" rx="1.5" class="ico-f"/>
+          <svg class="benefit-icon" viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="8" y="12" width="48" height="34" rx="3" class="benefit-icon__stroke"/>
+            <path d="M8 20h48" class="benefit-icon__stroke"/>
+            <circle cx="13" cy="16" r="1.4" class="benefit-icon__dot"/><circle cx="18" cy="16" r="1.4" class="benefit-icon__dot"/>
+            <path d="M16 28l6 5-6 5M26 38h8" class="benefit-icon__stroke"/>
+            <path d="M24 56h16M32 46v10" class="benefit-icon__stroke"/>
+            <rect x="40" y="26" width="10" height="13" rx="1.5" class="benefit-icon__fill"/>
           </svg>
           <div><h3>Finish with a capstone of your own</h3><p>Complete a 6-unit master's project or thesis, defended before a faculty committee and noted on your transcript.</p></div>
         </li>
         <li>
-          <svg class="ico" viewBox="0 0 64 64" aria-hidden="true">
-            <path d="M32 14l12 5v9c0 9-5 16-12 20z" class="ico-f"/>
-            <path d="M32 6l20 8v14c0 14-9 24-20 30C21 52 12 42 12 28V14z" class="ico-l"/>
-            <path d="M24 31l6 6 10-12" class="ico-l"/>
+          <svg class="benefit-icon" viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M32 14l12 5v9c0 9-5 16-12 20z" class="benefit-icon__fill"/>
+            <path d="M32 6l20 8v14c0 14-9 24-20 30C21 52 12 42 12 28V14z" class="benefit-icon__stroke"/>
+            <path d="M24 31l6 6 10-12" class="benefit-icon__stroke"/>
           </svg>
           <div><h3>Build your own specialty</h3><p>Choose six electives from eleven courses covering malware analysis, cryptography, network security, adversarial AI and embedded-systems security.</p></div>
         </li>
         <li>
-          <svg class="ico" viewBox="0 0 64 64" aria-hidden="true">
-            <circle cx="22" cy="22" r="8" class="ico-f"/><circle cx="44" cy="24" r="7" class="ico-l"/>
-            <path d="M8 52c0-9 6-16 14-16s14 7 14 16M34 52c1-8 5-13 10-13s10 5 10 13" class="ico-l"/>
+          <svg class="benefit-icon" viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="22" cy="22" r="8" class="benefit-icon__fill"/><circle cx="44" cy="24" r="7" class="benefit-icon__stroke"/>
+            <path d="M8 52c0-9 6-16 14-16s14 7 14 16M34 52c1-8 5-13 10-13s10 5 10 13" class="benefit-icon__stroke"/>
           </svg>
           <div><h3>Learn from active researchers</h3><p>Study with faculty from the department's <a href="https://cse.washu.edu/faculty-research/research-areas/Cybersecurity.html">Security and Privacy</a> research area.</p></div>
         </li>
         <li>
-          <svg class="ico" viewBox="0 0 64 64" aria-hidden="true">
-            <circle cx="32" cy="32" r="16" class="ico-f"/>
-            <circle cx="32" cy="32" r="23" class="ico-l"/>
-            <path d="M37 26c-1-2-3-3-5-3-3 0-5 2-5 4 0 6 11 3 11 9 0 2-2 4-6 4-2 0-4-1-5-3M32 19v4M32 41v4" class="ico-w"/>
+          <svg class="benefit-icon" viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="16" class="benefit-icon__fill"/>
+            <circle cx="32" cy="32" r="23" class="benefit-icon__stroke"/>
+            <path d="M37 26c-1-2-3-3-5-3-3 0-5 2-5 4 0 6 11 3 11 9 0 2-2 4-6 4-2 0-4-1-5-3M32 19v4M32 41v4" class="benefit-icon__stroke-light"/>
           </svg>
           <div><h3>Scholarships with no extra application</h3><p>Admitted students can be considered for the merit-based Master's Excellence Scholarship. No separate application is required. <a href="#tuition">See funding</a></p></div>
         </li>
       </ul>
     </section>
 
-    <!-- COURSES -->
-    <section id="courses" class="sec">
+    <!-- ---------- Courses + interactive planner ---------- -->
+    <section id="courses" class="section">
       <h2>Courses</h2>
       <p>Thirty units: two core courses, six electives and a capstone. Pick six electives to plan your 30 units.</p>
 
       <div class="planner">
-        <div class="planner__top">
-          <p class="planner__count"><strong id="unitCount">12</strong> / 30 units planned</p>
-          <div class="numtoggle" role="group" aria-label="Course number format">
+        <div class="planner__header">
+          <p class="planner__count"><strong id="unit-count">12</strong> / 30 units planned</p>
+          <div class="number-toggle" role="group" aria-label="Course number format">
             <button type="button" class="is-on" data-num="new" aria-pressed="true">Current numbers</button>
             <button type="button" data-num="old" aria-pressed="false">Pre-Fall 2025</button>
           </div>
         </div>
         <div class="unitbar" aria-hidden="true">
-          <span class="unitbar__seg seg--core" style="flex:6">Core<span class="u-n">&nbsp;· 6</span></span>
-          <span class="unitbar__seg seg--elec" style="flex:18"><span class="unitbar__fill" id="elecFill"></span><span class="unitbar__lbl" id="elecLbl">Electives · 0 / 18</span></span>
-          <span class="unitbar__seg seg--cap" style="flex:6">Capstone<span class="u-n">&nbsp;· 6</span></span>
+          <span class="unitbar__segment unitbar__segment--core" style="flex:6">Core<span class="unitbar__count">&nbsp;· 6</span></span>
+          <span class="unitbar__segment unitbar__segment--electives" style="flex:18"><span class="unitbar__fill" id="elective-fill"></span><span class="unitbar__label" id="elective-label">Electives · 0 / 18</span></span>
+          <span class="unitbar__segment unitbar__segment--capstone" style="flex:6">Capstone<span class="unitbar__count">&nbsp;· 6</span></span>
         </div>
       </div>
 
-      <h3 class="group-h">Core Courses <span>required · 6 units</span></h3>
-      <div class="courses courses--fixed">
-        <article class="course is-core">
-          <span class="course__num" data-new="CSE 4303" data-old="CSE 433S">CSE 4303</span>
-          <span class="course__t">Introduction to Computer Security</span>
+      <h3 class="group-heading">Core Courses <span>required · 6 units</span></h3>
+      <div class="course-grid course-grid--required">
+        <article class="course course--core">
+          <span class="course__number" data-new="CSE 4303" data-old="CSE 433S">CSE 4303</span>
+          <span class="course__title">Introduction to Computer Security</span>
           <span class="course__units">3 units</span>
         </article>
-        <article class="course is-core">
-          <span class="course__num" data-new="CSE 5203" data-old="CSE 523S">CSE 5203</span>
-          <span class="course__t">Systems Security</span>
+        <article class="course course--core">
+          <span class="course__number" data-new="CSE 5203" data-old="CSE 523S">CSE 5203</span>
+          <span class="course__title">Systems Security</span>
           <span class="course__units">3 units</span>
         </article>
       </div>
 
-      <h3 class="group-h">Program Electives <span>choose six · 18 units</span></h3>
-      <div class="filters" role="group" aria-label="Filter electives by topic">
-        <button type="button" class="chip is-on" data-filter="all" aria-pressed="true">All 11</button>
-        <button type="button" class="chip" data-filter="systems" aria-pressed="false">Systems</button>
-        <button type="button" class="chip" data-filter="networks" aria-pressed="false">Networks</button>
-        <button type="button" class="chip" data-filter="privacy" aria-pressed="false">Privacy &amp; Web</button>
-        <button type="button" class="chip" data-filter="crypto" aria-pressed="false">Crypto &amp; AI</button>
+      <h3 class="group-heading">Program Electives <span>choose six · 18 units</span></h3>
+      <div class="elective-filters" role="group" aria-label="Filter electives by topic">
+        <button type="button" class="filter-chip is-on" data-filter="all" aria-pressed="true">All 11</button>
+        <button type="button" class="filter-chip" data-filter="systems" aria-pressed="false">Systems</button>
+        <button type="button" class="filter-chip" data-filter="networks" aria-pressed="false">Networks</button>
+        <button type="button" class="filter-chip" data-filter="privacy" aria-pressed="false">Privacy &amp; Web</button>
+        <button type="button" class="filter-chip" data-filter="crypto" aria-pressed="false">Crypto &amp; AI</button>
       </div>
-      <div class="courses courses--elec" id="electives">
-        <button type="button" class="course is-elec" data-tags="privacy" aria-pressed="false"><span class="course__num" data-new="CSE 4103" data-old="CSE 413A">CSE 4103</span><span class="course__t">Web Privacy and Security</span><span class="course__units">3 units</span></button>
-        <button type="button" class="course is-elec" data-tags="systems" aria-pressed="false"><span class="course__num" data-new="CSE 4202" data-old="CSE 422S">CSE 4202</span><span class="course__t">Operating Systems Organization</span><span class="course__units">3 units</span></button>
-        <button type="button" class="course is-elec" data-tags="systems" aria-pressed="false"><span class="course__num" data-new="CSE 4304" data-old="CSE 434S">CSE 4304</span><span class="course__t">Reverse Engineering and Malware Analysis</span><span class="course__units">3 units</span></button>
-        <button type="button" class="course is-elec" data-tags="crypto" aria-pressed="false"><span class="course__num" data-new="CSE 4402" data-old="CSE 442T">CSE 4402</span><span class="course__t">Introduction to Cryptography</span><span class="course__units">3 units</span></button>
-        <button type="button" class="course is-elec" data-tags="networks" aria-pressed="false"><span class="course__num" data-new="CSE 4703" data-old="CSE 473S">CSE 4703</span><span class="course__t">Introduction to Computer Networks</span><span class="course__units">3 units</span></button>
-        <button type="button" class="course is-elec" data-tags="systems" aria-pressed="false"><span class="course__num" data-new="CSE 5202" data-old="CSE 522S">CSE 5202</span><span class="course__t">Advanced Operating Systems</span><span class="course__units">3 units</span></button>
-        <button type="button" class="course is-elec" data-tags="privacy" aria-pressed="false"><span class="course__num" data-new="CSE 5271" data-old="CSE 527S">CSE 5271</span><span class="course__t">Data-driven Privacy and Security</span><span class="course__units">3 units</span></button>
-        <button type="button" class="course is-elec" data-tags="systems" aria-pressed="false"><span class="course__num" data-new="CSE 5402" data-old="CSE 542S">CSE 5402</span><span class="course__t">Concurrency and Memory Safe System Software Development</span><span class="course__units">3 units</span></button>
-        <button type="button" class="course is-elec" data-tags="crypto" aria-pressed="false"><span class="course__num" data-new="CSE 5505" data-old="CSE 555T">CSE 5505</span><span class="course__t">Adversarial AI</span><span class="course__units">3 units</span></button>
-        <button type="button" class="course is-elec" data-tags="systems networks" aria-pressed="false"><span class="course__num" data-new="CSE 5619" data-old="CSE 569S">CSE 5619</span><span class="course__t">Advanced IoT, Real-Time, and Embedded Systems Security</span><span class="course__units">3 units</span></button>
-        <button type="button" class="course is-elec" data-tags="networks" aria-pressed="false"><span class="course__num" data-new="CSE 5701" data-old="CSE 571S">CSE 5701</span><span class="course__t">Network Security</span><span class="course__units">3 units</span></button>
+      <div class="course-grid course-grid--electives" id="electives">
+        <button type="button" class="course course--elective" data-tags="privacy" aria-pressed="false"><span class="course__number" data-new="CSE 4103" data-old="CSE 413A">CSE 4103</span><span class="course__title">Web Privacy and Security</span><span class="course__units">3 units</span></button>
+        <button type="button" class="course course--elective" data-tags="systems" aria-pressed="false"><span class="course__number" data-new="CSE 4202" data-old="CSE 422S">CSE 4202</span><span class="course__title">Operating Systems Organization</span><span class="course__units">3 units</span></button>
+        <button type="button" class="course course--elective" data-tags="systems" aria-pressed="false"><span class="course__number" data-new="CSE 4304" data-old="CSE 434S">CSE 4304</span><span class="course__title">Reverse Engineering and Malware Analysis</span><span class="course__units">3 units</span></button>
+        <button type="button" class="course course--elective" data-tags="crypto" aria-pressed="false"><span class="course__number" data-new="CSE 4402" data-old="CSE 442T">CSE 4402</span><span class="course__title">Introduction to Cryptography</span><span class="course__units">3 units</span></button>
+        <button type="button" class="course course--elective" data-tags="networks" aria-pressed="false"><span class="course__number" data-new="CSE 4703" data-old="CSE 473S">CSE 4703</span><span class="course__title">Introduction to Computer Networks</span><span class="course__units">3 units</span></button>
+        <button type="button" class="course course--elective" data-tags="systems" aria-pressed="false"><span class="course__number" data-new="CSE 5202" data-old="CSE 522S">CSE 5202</span><span class="course__title">Advanced Operating Systems</span><span class="course__units">3 units</span></button>
+        <button type="button" class="course course--elective" data-tags="privacy" aria-pressed="false"><span class="course__number" data-new="CSE 5271" data-old="CSE 527S">CSE 5271</span><span class="course__title">Data-driven Privacy and Security</span><span class="course__units">3 units</span></button>
+        <button type="button" class="course course--elective" data-tags="systems" aria-pressed="false"><span class="course__number" data-new="CSE 5402" data-old="CSE 542S">CSE 5402</span><span class="course__title">Concurrency and Memory Safe System Software Development</span><span class="course__units">3 units</span></button>
+        <button type="button" class="course course--elective" data-tags="crypto" aria-pressed="false"><span class="course__number" data-new="CSE 5505" data-old="CSE 555T">CSE 5505</span><span class="course__title">Adversarial AI</span><span class="course__units">3 units</span></button>
+        <button type="button" class="course course--elective" data-tags="systems networks" aria-pressed="false"><span class="course__number" data-new="CSE 5619" data-old="CSE 569S">CSE 5619</span><span class="course__title">Advanced IoT, Real-Time, and Embedded Systems Security</span><span class="course__units">3 units</span></button>
+        <button type="button" class="course course--elective" data-tags="networks" aria-pressed="false"><span class="course__number" data-new="CSE 5701" data-old="CSE 571S">CSE 5701</span><span class="course__title">Network Security</span><span class="course__units">3 units</span></button>
       </div>
-      <p class="planner__msg" id="plannerMsg" role="status" aria-live="polite"></p>
+      <p class="planner__message" id="planner-message" role="status" aria-live="polite"></p>
 
-      <h3 class="group-h">Culminating Experience <span>6 units</span></h3>
-      <div class="courses courses--fixed">
-        <article class="course is-cap">
-          <span class="course__num" data-new="CSE 7998" data-old="CSE 598/599">CSE 7998</span>
-          <span class="course__t">Master's Capstone</span>
+      <h3 class="group-heading">Culminating Experience <span>6 units</span></h3>
+      <div class="course-grid course-grid--required">
+        <article class="course course--capstone">
+          <span class="course__number" data-new="CSE 7998" data-old="CSE 598/599">CSE 7998</span>
+          <span class="course__title">Master's Capstone</span>
           <span class="course__units">6 units required, typically completed over two semesters</span>
         </article>
       </div>
-      <p class="fine">Course numbers changed in Fall 2025. Switch to “Pre-Fall 2025” above to see the earlier numbers. For schedules, see <a href="https://cse.washu.edu/academics/course-offerings.html">Course Offerings</a>.</p>
+      <p class="fine-print">Course numbers changed in Fall 2025. Switch to “Pre-Fall 2025” above to see the earlier numbers. For schedules, see <a href="https://cse.washu.edu/academics/course-offerings.html">Course Offerings</a>.</p>
     </section>
 
-    <!-- REQUIREMENTS -->
-    <section id="requirements" class="sec">
+    <!-- ---------- Degree Requirements ---------- -->
+    <section id="requirements" class="section">
       <h2>General Degree Requirements</h2>
-      <ul class="rules">
-        <li><span class="rules__tag">GPA</span><p>As per McKelvey School of Engineering guidelines, students must maintain a GPA of at least <strong>2.70</strong>.</p></li>
-        <li><span class="rules__tag">Grades</span><p>Six units of CSE 7998 are graded Pass/No Pass. The remaining 24 units must be taken for a grade (not Pass/No Pass), and the grade in each course must be <strong>C– or better</strong>.</p></li>
-        <li><span class="rules__tag">Independent study</span><p>None of the 30 units may be independent study (CSE 4000 (CSE 400) or CSE 5999 (CSE 500)).</p></li>
-        <li><span class="rules__tag">“N” courses</span><p>Courses with an “N” designation do not count toward the master's degree.</p></li>
-        <li><span class="rules__tag">Substitutions</span><p>Students who have already taken core or elective courses specified by the program can, with departmental approval, substitute other courses that are suitably technical and appropriate to the degree program. Departmental approval requires justification and is evaluated with increasing stringency for each additional substitution.</p></li>
+      <ul class="rule-list">
+        <li><span class="rule-list__label">GPA</span><p>As per McKelvey School of Engineering guidelines, students must maintain a GPA of at least <strong>2.70</strong>.</p></li>
+        <li><span class="rule-list__label">Grades</span><p>Six units of CSE 7998 are graded Pass/No Pass. The remaining 24 units must be taken for a grade (not Pass/No Pass), and the grade in each course must be <strong>C– or better</strong>.</p></li>
+        <li><span class="rule-list__label">Independent study</span><p>None of the 30 units may be independent study (CSE 4000 (CSE 400) or CSE 5999 (CSE 500)).</p></li>
+        <li><span class="rule-list__label">“N” courses</span><p>Courses with an “N” designation do not count toward the master's degree.</p></li>
+        <li><span class="rule-list__label">Substitutions</span><p>Students who have already taken core or elective courses specified by the program can, with departmental approval, substitute other courses that are suitably technical and appropriate to the degree program. Departmental approval requires justification and is evaluated with increasing stringency for each additional substitution.</p></li>
       </ul>
     </section>
 
-    <!-- CAPSTONE -->
-    <section id="capstone" class="sec">
+    <!-- ---------- Master's Capstone ---------- -->
+    <section id="capstone" class="section">
       <h2>Master's Capstone</h2>
       <p>Beginning in Fall 2025, students taking the project or thesis option register for <strong>CSE 7998 (Master's Capstone)</strong>. CSE 7998 does not count toward the 30 required units until the student has successfully defended the project or thesis.</p>
 
-      <div class="paths">
-        <div class="path"><p class="path__n">Option 1</p><h3>6-unit master's project</h3><p>Upon a successful defense, 6 units of CSE 7998 count toward your coursework at the CSE 5000 level.</p></div>
-        <div class="path__or" aria-hidden="true">or</div>
-        <div class="path"><p class="path__n">Option 2</p><h3>Master's thesis</h3><p>Upon a successful defense, 6 units of CSE 7998 count toward your coursework at the CSE 5000 level.</p></div>
+      <div class="capstone-options">
+        <div class="capstone-option"><p class="capstone-option__label">Option 1</p><h3>6-unit master's project</h3><p>Upon a successful defense, 6 units of CSE 7998 count toward your coursework at the CSE 5000 level.</p></div>
+        <div class="capstone-options__or" aria-hidden="true">or</div>
+        <div class="capstone-option"><p class="capstone-option__label">Option 2</p><h3>Master's thesis</h3><p>Upon a successful defense, 6 units of CSE 7998 count toward your coursework at the CSE 5000 level.</p></div>
       </div>
       <p>Either way, a notation is added to your transcript showing which option you completed. CSE 7998 is graded Pass/No Pass each semester. A passing grade and a completed progress report are required in the first semester to continue the work in the final semester.</p>
 
@@ -349,7 +349,7 @@
       <div class="accordion">
         <details>
           <summary>What goes in the progress report?</summary>
-          <div class="acc-body">
+          <div class="accordion__body">
             <p>Near the end of the first semester of a two-semester thesis or project, the student submits a written progress report to the committee. The committee uses it to evaluate progress and to give the student feedback. The report should include:</p>
             <ul>
               <li>A copy of the original scope and duration of the work to be performed (from the original proposal form). Contact the Graduate Coordinator to receive a copy of your original proposal form.</li>
@@ -362,21 +362,21 @@
         </details>
         <details>
           <summary>What outcomes can the committee decide?</summary>
-          <div class="acc-body">
+          <div class="accordion__body">
             <p>Once the report is submitted, the committee confers privately and decides on one of three outcomes. The department's Graduate Coordinator communicates the outcome to the student before the official end of the semester.</p>
-            <ul class="outcomes">
-              <li class="oc oc--go"><strong>Continue without concern.</strong> The student is making consistent progress and is on track to finish on time.</li>
-              <li class="oc oc--warn"><strong>Continue with concern.</strong> The student is making some progress but is falling behind. Without change, the student is not likely to finish successfully.</li>
-              <li class="oc oc--stop"><strong>Should not continue.</strong> Progress is insufficient and the project or thesis should be terminated. The student will not be enrolled in the second semester's units.</li>
+            <ul class="outcome-list">
+              <li class="outcome outcome--continue"><strong>Continue without concern.</strong> The student is making consistent progress and is on track to finish on time.</li>
+              <li class="outcome outcome--concern"><strong>Continue with concern.</strong> The student is making some progress but is falling behind. Without change, the student is not likely to finish successfully.</li>
+              <li class="outcome outcome--stop"><strong>Should not continue.</strong> Progress is insufficient and the project or thesis should be terminated. The student will not be enrolled in the second semester's units.</li>
             </ul>
           </div>
         </details>
         <details>
           <summary>What happens if a project or thesis is terminated?</summary>
-          <div class="acc-body">
+          <div class="accordion__body">
             <p>Starting Fall 2024, Master's Project/Thesis students cannot receive an “N” grade for a terminated project. Contact the Graduate Coordinator as soon as possible with any questions about terminating a project or thesis.</p>
             <div class="table-scroll">
-              <table class="tbl">
+              <table class="data-table">
                 <caption>Effect of terminating a two-semester project or thesis</caption>
                 <thead><tr><th scope="col">Terminated…</th><th scope="col">During semester 1</th><th scope="col">During semester 2 (semester 1 completed)</th></tr></thead>
                 <tbody>
@@ -389,43 +389,43 @@
           </div>
         </details>
       </div>
-      <p class="fine">For full details, see the department's <a href="https://cse.washu.edu/documents/CSE-Department-Masters-Program-Handbook.pdf">Master's Program Handbook (PDF)</a> and <a href="https://cse.washu.edu/academics/graduate/current-students/Resources-for-Current-Masters-Students.html">Resources for Current Master's Students</a>.</p>
+      <p class="fine-print">For full details, see the department's <a href="https://cse.washu.edu/documents/CSE-Department-Masters-Program-Handbook.pdf">Master's Program Handbook (PDF)</a> and <a href="https://cse.washu.edu/academics/graduate/current-students/Resources-for-Current-Masters-Students.html">Resources for Current Master's Students</a>.</p>
     </section>
 
-    <!-- ADMISSIONS -->
-    <section id="admissions" class="sec">
+    <!-- ---------- Admissions ---------- -->
+    <section id="admissions" class="section">
       <h2>Admissions</h2>
       <p>Apply online. Applications aren't reviewed until all materials and payments are received. Full details: <a href="https://engineering.washu.edu/academics/graduate-admissions/application-checklist.html">Application process &amp; checklist</a>.</p>
 
       <ul class="checklist">
-        <li><span class="ck" aria-hidden="true"></span><div><strong>Bachelor's degree</strong>Earned, or to be earned, by the start of the program.</div></li>
-        <li><span class="ck" aria-hidden="true"></span><div><strong>Transcripts</strong>All undergraduate and graduate transcripts, in English or with a professional translation.</div></li>
-        <li><span class="ck" aria-hidden="true"></span><div><strong>Letters of recommendation</strong>Three for full-time applicants, two for part-time. Recommenders submit online only.</div></li>
-        <li><span class="ck" aria-hidden="true"></span><div><strong>Statement of purpose</strong>1–2 pages.</div></li>
-        <li><span class="ck" aria-hidden="true"></span><div><strong>Résumé or CV</strong>Required.</div></li>
-        <li><span class="ck" aria-hidden="true"></span><div><strong>GRE optional</strong>Optional for full-time applicants, not required for part-time. ETS school code 6929.</div></li>
-        <li><span class="ck" aria-hidden="true"></span><div><strong>English proficiency</strong>For international applicants: TOEFL iBT 90 (5.0 on the new scale), IELTS Academic 6.5, Duolingo 125 or GATEWAY 495. Exemptions may be granted.</div></li>
-        <li><span class="ck" aria-hidden="true"></span><div><strong>$75 application fee</strong>Non-refundable. Waived for current WashU students and employees and for attendees of an eligible info session.</div></li>
+        <li><span class="checklist__icon" aria-hidden="true"></span><div><strong>Bachelor's degree</strong>Earned, or to be earned, by the start of the program.</div></li>
+        <li><span class="checklist__icon" aria-hidden="true"></span><div><strong>Transcripts</strong>All undergraduate and graduate transcripts, in English or with a professional translation.</div></li>
+        <li><span class="checklist__icon" aria-hidden="true"></span><div><strong>Letters of recommendation</strong>Three for full-time applicants, two for part-time. Recommenders submit online only.</div></li>
+        <li><span class="checklist__icon" aria-hidden="true"></span><div><strong>Statement of purpose</strong>1–2 pages.</div></li>
+        <li><span class="checklist__icon" aria-hidden="true"></span><div><strong>Résumé or CV</strong>Required.</div></li>
+        <li><span class="checklist__icon" aria-hidden="true"></span><div><strong>GRE optional</strong>Optional for full-time applicants, not required for part-time. ETS school code 6929.</div></li>
+        <li><span class="checklist__icon" aria-hidden="true"></span><div><strong>English proficiency</strong>For international applicants: TOEFL iBT 90 (5.0 on the new scale), IELTS Academic 6.5, Duolingo 125 or GATEWAY 495. Exemptions may be granted.</div></li>
+        <li><span class="checklist__icon" aria-hidden="true"></span><div><strong>$75 application fee</strong>Non-refundable. Waived for current WashU students and employees and for attendees of an eligible info session.</div></li>
       </ul>
     </section>
 
-    <!-- NEXT TERM -->
-    <section id="next-term" class="sec">
+    <!-- ---------- Next Start Term (countdown filled in by script.js) ---------- -->
+    <section id="next-term" class="section">
       <h2>Next Start Term</h2>
-      <div class="nextterm">
-        <div class="nextterm__main">
-          <p class="nextterm__label">Next full-time deadline</p>
-          <p class="nextterm__term" id="ntTerm">Fall 2027</p>
-          <p class="nextterm__what" id="ntWhat">Early decision</p>
+      <div class="next-term">
+        <div class="next-term__main">
+          <p class="next-term__label">Next full-time deadline</p>
+          <p class="next-term__name" id="next-term-name">Fall 2027</p>
+          <p class="next-term__type" id="next-term-type">Early decision</p>
         </div>
-        <div class="nextterm__count">
-          <p><span class="nextterm__days" id="ntDays">—</span><span class="nextterm__unit">days left</span></p>
-          <p class="nextterm__date" id="ntDate">Apply by Dec. 31</p>
+        <div class="next-term__countdown">
+          <p><span class="next-term__days" id="next-term-days">—</span><span class="next-term__unit">days left</span></p>
+          <p class="next-term__date" id="next-term-date">Apply by Dec. 31</p>
         </div>
       </div>
 
       <div class="table-scroll">
-        <table class="tbl tbl--deadlines">
+        <table class="data-table data-table--deadlines">
           <caption>Master's application deadlines (11:59 p.m. Eastern)</caption>
           <thead><tr><th scope="col">Entry term</th><th scope="col">Opens</th><th scope="col">Deadline</th><th scope="col">Decision by</th><th scope="col">Reply by</th></tr></thead>
           <tbody>
@@ -437,9 +437,9 @@
           </tbody>
         </table>
       </div>
-      <p class="fine">*Part-time applicants must be U.S. citizens, permanent residents or hold an eligible visa status. Source: <a href="https://engineering.washu.edu/academics/graduate-admissions/deadlines.html">McKelvey graduate application deadlines</a>.</p>
+      <p class="fine-print">*Part-time applicants must be U.S. citizens, permanent residents or hold an eligible visa status. Source: <a href="https://engineering.washu.edu/academics/graduate-admissions/deadlines.html">McKelvey graduate application deadlines</a>.</p>
 
-      <div class="sessions">
+      <div class="info-sessions">
         <div>
           <h3>Upcoming master's info sessions</h3>
           <ul>
@@ -451,60 +451,60 @@
       </div>
     </section>
 
-    <!-- FACULTY -->
-    <section id="faculty" class="sec">
+    <!-- ---------- Featured Faculty ---------- -->
+    <section id="faculty" class="section">
       <h2>Featured Faculty</h2>
       <p>Faculty in the department's Security and Privacy research area.</p>
       <!-- NOTE: The department doesn't publish who teaches in this MS program. These faculty are listed on the CSE "Security and Privacy" research-area page; titles come from the CSE faculty directory. -->
-      <!-- PLACEHOLDER: add instructor ratings / "who teaches what" if the department publishes it. -->
-      <div class="faculty" id="facultyRail" tabindex="0" aria-label="Faculty, scrollable">
-        <a class="prof" href="https://engineering.washu.edu/faculty/Ning-Zhang.html"><span class="prof__ph"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Ning-Zhang.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="prof__n">Ning Zhang</span><span class="prof__t">Associate Professor</span></a>
-        <a class="prof" href="https://engineering.washu.edu/faculty/Umar-Iqbal.html"><span class="prof__ph"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Umar-Iqbal.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="prof__n">Umar Iqbal</span><span class="prof__t">Assistant Professor</span></a>
-        <a class="prof" href="https://engineering.washu.edu/faculty/Yevgeniy-Vorobeychik.html"><span class="prof__ph"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Eugene-Vorobeychik.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="prof__n">Yevgeniy Vorobeychik</span><span class="prof__t">Professor</span></a>
-        <a class="prof" href="https://engineering.washu.edu/faculty/Raj-Jain.html"><span class="prof__ph"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Jain_Raj.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="prof__n">Raj Jain</span><span class="prof__t">Professor</span></a>
-        <a class="prof" href="https://engineering.washu.edu/faculty/Christopher-Gill.html"><span class="prof__ph"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Gill_Chris.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="prof__n">Christopher Gill</span><span class="prof__t">Professor</span></a>
-        <a class="prof" href="https://engineering.washu.edu/faculty/Netanel-Raviv.html"><span class="prof__ph"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Netanel-Raviv.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="prof__n">Netanel Raviv</span><span class="prof__t">Assistant Professor</span></a>
-        <a class="prof" href="https://engineering.washu.edu/faculty/Roch-Guerin.html"><span class="prof__ph"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Guerin_Guerin.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="prof__n">Roch Guérin</span><span class="prof__t">Department Chair &amp; Professor</span></a>
-        <a class="prof" href="https://engineering.washu.edu/faculty/Nathan-Jacobs.html"><span class="prof__ph"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Nathan-Jacobs1.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="prof__n">Nathan Jacobs</span><span class="prof__t">Vice Provost &amp; Professor</span></a>
+      <!-- TODO: add instructor ratings / "who teaches what" if the department publishes it. -->
+      <div class="faculty-rail" id="faculty-list" tabindex="0" aria-label="Faculty, scrollable">
+        <a class="faculty-card" href="https://engineering.washu.edu/faculty/Ning-Zhang.html"><span class="faculty-card__photo"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Ning-Zhang.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="faculty-card__name">Ning Zhang</span><span class="faculty-card__title">Associate Professor</span></a>
+        <a class="faculty-card" href="https://engineering.washu.edu/faculty/Umar-Iqbal.html"><span class="faculty-card__photo"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Umar-Iqbal.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="faculty-card__name">Umar Iqbal</span><span class="faculty-card__title">Assistant Professor</span></a>
+        <a class="faculty-card" href="https://engineering.washu.edu/faculty/Yevgeniy-Vorobeychik.html"><span class="faculty-card__photo"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Eugene-Vorobeychik.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="faculty-card__name">Yevgeniy Vorobeychik</span><span class="faculty-card__title">Professor</span></a>
+        <a class="faculty-card" href="https://engineering.washu.edu/faculty/Raj-Jain.html"><span class="faculty-card__photo"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Jain_Raj.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="faculty-card__name">Raj Jain</span><span class="faculty-card__title">Professor</span></a>
+        <a class="faculty-card" href="https://engineering.washu.edu/faculty/Christopher-Gill.html"><span class="faculty-card__photo"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Gill_Chris.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="faculty-card__name">Christopher Gill</span><span class="faculty-card__title">Professor</span></a>
+        <a class="faculty-card" href="https://engineering.washu.edu/faculty/Netanel-Raviv.html"><span class="faculty-card__photo"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Netanel-Raviv.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="faculty-card__name">Netanel Raviv</span><span class="faculty-card__title">Assistant Professor</span></a>
+        <a class="faculty-card" href="https://engineering.washu.edu/faculty/Roch-Guerin.html"><span class="faculty-card__photo"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Guerin_Guerin.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="faculty-card__name">Roch Guérin</span><span class="faculty-card__title">Department Chair &amp; Professor</span></a>
+        <a class="faculty-card" href="https://engineering.washu.edu/faculty/Nathan-Jacobs.html"><span class="faculty-card__photo"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Nathan-Jacobs1.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="faculty-card__name">Nathan Jacobs</span><span class="faculty-card__title">Vice Provost &amp; Professor</span></a>
       </div>
-      <div class="rail-ctrl">
-        <button type="button" class="rail-btn" data-dir="-1" aria-label="Scroll faculty left"><svg class="i-arrow i-arrow--l" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button>
-        <button type="button" class="rail-btn" data-dir="1" aria-label="Scroll faculty right"><svg class="i-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button>
-        <a class="arrowlink" href="https://cse.washu.edu/faculty-research/research-areas/Cybersecurity.html">All Security &amp; Privacy faculty <svg class="i-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      <div class="faculty-rail__controls">
+        <button type="button" class="faculty-rail__button" data-dir="-1" aria-label="Scroll faculty left"><svg class="icon-arrow icon-arrow--left" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button>
+        <button type="button" class="faculty-rail__button" data-dir="1" aria-label="Scroll faculty right"><svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button>
+        <a class="arrow-link" href="https://cse.washu.edu/faculty-research/research-areas/Cybersecurity.html">All Security &amp; Privacy faculty <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </div>
     </section>
 
-    <!-- CAREERS -->
+    <!-- ---------- Careers & Outcomes ---------- -->
     <!-- WashU does not publish outcomes for this program alone. The figures below are national
          U.S. Bureau of Labor Statistics data (OOH page last modified Aug. 27, 2026), labelled as such.
          Swap in program data if McKelvey publishes it. -->
-    <section id="careers" class="sec">
+    <section id="careers" class="section">
       <h2>Career Opportunities &amp; Alumni Outcomes</h2>
       <p>WashU doesn't publish outcomes for this program on its own, so here is the national picture for information security analysts, one of the field's core roles.</p>
-      <div class="stats">
-        <div class="stat"><p class="stat__n">$129,180</p><p>median U.S. pay in 2025</p></div>
-        <div class="stat"><p class="stat__n">21%</p><p>projected job growth, 2025–35, much faster than average</p></div>
-        <div class="stat"><p class="stat__n">14,100</p><p>openings projected each year, on average</p></div>
+      <div class="stat-grid">
+        <div class="stat-card"><p class="stat-card__number">$129,180</p><p>median U.S. pay in 2025</p></div>
+        <div class="stat-card"><p class="stat-card__number">21%</p><p>projected job growth, 2025–35, much faster than average</p></div>
+        <div class="stat-card"><p class="stat-card__number">14,100</p><p>openings projected each year, on average</p></div>
       </div>
-      <p class="fine stats__src">National figures, not WashU outcomes. Source: <a href="https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm">U.S. Bureau of Labor Statistics, Occupational Outlook Handbook</a>.</p>
-      <div class="roles">
-        <p class="roles__h">Common roles in the field</p>
+      <p class="fine-print stat-grid__source">National figures, not WashU outcomes. Source: <a href="https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm">U.S. Bureau of Labor Statistics, Occupational Outlook Handbook</a>.</p>
+      <div class="role-list">
+        <p class="role-list__heading">Common roles in the field</p>
         <ul><li>Security Engineer</li><li>Security Architect</li><li>Penetration Tester</li><li>Malware Analyst</li><li>Privacy Engineer</li><li>Embedded &amp; IoT Security Engineer</li></ul>
       </div>
-      <div class="cta-row">
-        <a class="arrowlink" href="https://careers.washu.edu/channels/career-outcomes/">See where WashU graduates land <svg class="i-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      <div class="action-row">
+        <a class="arrow-link" href="https://careers.washu.edu/channels/career-outcomes/">See where WashU graduates land <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </div>
     </section>
 
-    <!-- TUITION -->
-    <section id="tuition" class="sec">
+    <!-- ---------- Tuition & Financial Aid ---------- -->
+    <section id="tuition" class="section">
       <h2>Tuition &amp; Financial Aid</h2>
       <p>Master's students are expected to be self-supporting, but scholarships, assistantships and federal aid are available.</p>
       <div class="table-scroll">
-        <table class="tbl tbl--tuition">
+        <table class="data-table data-table--tuition">
           <caption>2026–27 graduate tuition, McKelvey School of Engineering</caption>
           <tbody>
-            <tr><th scope="row">Full-time (9–21 units)</th><td><strong>$34,595</strong> per semester <span class="muted">($69,190 per year)</span></td></tr>
+            <tr><th scope="row">Full-time (9–21 units)</th><td><strong>$34,595</strong> per semester <span class="text-muted">($69,190 per year)</span></td></tr>
             <tr><th scope="row">Part-time master's (8 units or fewer)</th><td><strong>$2,450</strong> per unit</td></tr>
             <tr><th scope="row">Fees</th><td>Health &amp; Wellness $350 per semester · Graduate Activity $15 per semester</td></tr>
             <tr><th scope="row">Student Health Insurance Plan</th><td>$2,923, billed in fall</td></tr>
@@ -513,67 +513,67 @@
         </table>
       </div>
 
-      <h3 class="group-h">Scholarships &amp; funding</h3>
-      <div class="aid">
-        <div class="aid__card aid__card--hl"><p class="aid__amt">Up to $16,000</p><h4>Master's Excellence Scholarship</h4><p>Merit-based, $8,000 per semester, for the 2027–28 academic year. No separate application.</p></div>
-        <div class="aid__card"><p class="aid__amt">50%</p><h4>Bachelor's/Master's Scholarship</h4><p>For current WashU undergraduates: two full-time semesters, plus a summer term if needed.</p></div>
-        <div class="aid__card"><p class="aid__amt">Full tuition</p><h4>MS Research Assistantship</h4><p>Full tuition remission for up to four full-time semesters, a health fee subsidy and monthly pay. Awarded after enrollment; depends on faculty funding.</p></div>
-        <div class="aid__card"><p class="aid__amt">Federal aid</p><h4>Loans &amp; Work-Study</h4><p>Direct Unsubsidized Loans (up to $20,500 per year) and Federal Work-Study. Veterans can also use the Yellow Ribbon Program.</p></div>
+      <h3 class="group-heading">Scholarships &amp; funding</h3>
+      <div class="aid-grid">
+        <div class="aid-card aid-card--featured"><p class="aid-card__amount">Up to $16,000</p><h4>Master's Excellence Scholarship</h4><p>Merit-based, $8,000 per semester, for the 2027–28 academic year. No separate application.</p></div>
+        <div class="aid-card"><p class="aid-card__amount">50%</p><h4>Bachelor's/Master's Scholarship</h4><p>For current WashU undergraduates: two full-time semesters, plus a summer term if needed.</p></div>
+        <div class="aid-card"><p class="aid-card__amount">Full tuition</p><h4>MS Research Assistantship</h4><p>Full tuition remission for up to four full-time semesters, a health fee subsidy and monthly pay. Awarded after enrollment; depends on faculty funding.</p></div>
+        <div class="aid-card"><p class="aid-card__amount">Federal aid</p><h4>Loans &amp; Work-Study</h4><p>Direct Unsubsidized Loans (up to $20,500 per year) and Federal Work-Study. Veterans can also use the Yellow Ribbon Program.</p></div>
       </div>
-      <div class="cta-row">
+      <div class="action-row">
         <a class="btn btn--dark" href="https://engineering.washu.edu/academics/graduate-admissions/tuition-financial-assistance/index.html">Costs &amp; funding</a>
-        <a class="textlink" href="https://bulletin.wustl.edu/grad/engineering/masters/financial">Tuition &amp; refund policy</a>
-        <a class="textlink" href="mailto:mckelveygradfinancialaid@wustl.edu">Graduate Financial Aid · 314-935-1155</a>
+        <a class="text-link" href="https://bulletin.wustl.edu/grad/engineering/masters/financial">Tuition &amp; refund policy</a>
+        <a class="text-link" href="mailto:mckelveygradfinancialaid@wustl.edu">Graduate Financial Aid · 314-935-1155</a>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faqs" class="sec">
+    <!-- ---------- FAQs ---------- -->
+    <section id="faqs" class="section">
       <h2>FAQs</h2>
-      <button type="button" class="expand-all" aria-controls="faqList" aria-expanded="false">Expand all</button>
-      <div class="accordion accordion--faq" id="faqList">
+      <button type="button" class="expand-all" aria-controls="faq-list" aria-expanded="false">Expand all</button>
+      <div class="accordion accordion--faq" id="faq-list">
         <details>
           <summary>Who is this master's degree for?</summary>
-          <div class="acc-body"><p>Students who want to design, engineer and architect cybersecurity technology and systems. You'll need a programming foundation equivalent to CSE 1301 (Introduction to Computer Science) and CSE 2407 (Data Structures and Algorithms). If you're a working professional focused on managing security rather than engineering it, compare the <a href="#explore">Master of Cybersecurity Management</a>.</p></div>
+          <div class="accordion__body"><p>Students who want to design, engineer and architect cybersecurity technology and systems. You'll need a programming foundation equivalent to CSE 1301 (Introduction to Computer Science) and CSE 2407 (Data Structures and Algorithms). If you're a working professional focused on managing security rather than engineering it, compare the <a href="#explore">Master of Cybersecurity Management</a>.</p></div>
         </details>
         <details>
           <summary>How long does the program take?</summary>
-          <div class="acc-body"><p>The degree is 30 units. The 6-unit capstone is typically completed over two semesters. Full-time tuition covers 9–21 units per semester.</p>
-          <!-- PLACEHOLDER: the department does not publish a typical time-to-degree. Add it here, e.g. "Most full-time students finish in X semesters." --></div>
+          <div class="accordion__body"><p>The degree is 30 units. The 6-unit capstone is typically completed over two semesters. Full-time tuition covers 9–21 units per semester.</p>
+          <!-- TODO: the department does not publish a typical time-to-degree. Add it here, e.g. "Most full-time students finish in X semesters." --></div>
         </details>
         <details>
           <summary>Can I study part-time?</summary>
-          <div class="acc-body"><p>Yes. Part-time applicants have their own deadlines (July 15 for fall, Dec. 1 for spring), need two letters of recommendation instead of three, and don't need the GRE. Part-time study is open to U.S. citizens, permanent residents and holders of an eligible visa status. Part-time master's tuition is $2,450 per unit. Working professionals focused on managing security rather than engineering it can also compare the part-time <a href="https://sever.washu.edu/degree-programs/cybersecurity/index.html">Master of Cybersecurity Management</a>.</p></div>
+          <div class="accordion__body"><p>Yes. Part-time applicants have their own deadlines (July 15 for fall, Dec. 1 for spring), need two letters of recommendation instead of three, and don't need the GRE. Part-time study is open to U.S. citizens, permanent residents and holders of an eligible visa status. Part-time master's tuition is $2,450 per unit. Working professionals focused on managing security rather than engineering it can also compare the part-time <a href="https://sever.washu.edu/degree-programs/cybersecurity/index.html">Master of Cybersecurity Management</a>.</p></div>
         </details>
         <details>
           <summary>What coding skills do I need before applying?</summary>
-          <div class="acc-body"><p>The equivalent of CSE 1301 and CSE 2407. You can show them on your undergraduate transcript, test out of them, or take them at the start of the program.</p></div>
+          <div class="accordion__body"><p>The equivalent of CSE 1301 and CSE 2407. You can show them on your undergraduate transcript, test out of them, or take them at the start of the program.</p></div>
         </details>
         <details>
           <summary>Is the GRE required?</summary>
-          <div class="acc-body"><p>No. The GRE General Test is optional for full-time master's applicants and not required for part-time applicants. If you send scores, use ETS school code 6929.</p></div>
+          <div class="accordion__body"><p>No. The GRE General Test is optional for full-time master's applicants and not required for part-time applicants. If you send scores, use ETS school code 6929.</p></div>
         </details>
         <details>
           <summary>Do I have to write a thesis?</summary>
-          <div class="acc-body"><p>No. The program requires 6 units of CSE 7998 Master's Capstone, and you choose either a 6-unit master's project or a master's thesis. Both are defended and noted on your transcript. See <a href="#capstone">Master's Capstone</a>.</p></div>
+          <div class="accordion__body"><p>No. The program requires 6 units of CSE 7998 Master's Capstone, and you choose either a 6-unit master's project or a master's thesis. Both are defended and noted on your transcript. See <a href="#capstone">Master's Capstone</a>.</p></div>
         </details>
         <details>
           <summary>Can I substitute a course I've already taken?</summary>
-          <div class="acc-body"><p>Yes, with departmental approval. If you've already taken a core or elective course, you can substitute another suitably technical course. Each additional substitution is evaluated more strictly.</p></div>
+          <div class="accordion__body"><p>Yes, with departmental approval. If you've already taken a core or elective course, you can substitute another suitably technical course. Each additional substitution is evaluated more strictly.</p></div>
         </details>
         <details>
           <summary>How do I pay for the degree?</summary>
-          <div class="acc-body"><p>Admitted students can be considered for the Master's Excellence Scholarship (up to $16,000) with no separate application. Research assistantships, federal loans and Work-Study are also available. See <a href="#tuition">Tuition &amp; Financial Aid</a>.</p></div>
+          <div class="accordion__body"><p>Admitted students can be considered for the Master's Excellence Scholarship (up to $16,000) with no separate application. Research assistantships, federal loans and Work-Study are also available. See <a href="#tuition">Tuition &amp; Financial Aid</a>.</p></div>
         </details>
       </div>
-      <p class="fine">More answers: <a href="https://engineering.washu.edu/offices-services/student-services/graduate-student-services/FAQs.html">FAQs for master's degree students</a> · <a href="https://faq.cse.wustl.edu">CSE FAQ</a></p>
+      <p class="fine-print">More answers: <a href="https://engineering.washu.edu/offices-services/student-services/graduate-student-services/FAQs.html">FAQs for master's degree students</a> · <a href="https://faq.cse.wustl.edu">CSE FAQ</a></p>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="sec">
+    <!-- ---------- Program Contacts ---------- -->
+    <section id="contact" class="section">
       <h2>Program Contacts</h2>
       <p>Questions before you apply? <a href="https://gradadmit.wustl.edu/register/Web-Inquiry">Request information</a> from McKelvey graduate admissions, or write to the program directly.</p>
-      <div class="contacts">
+      <div class="contact-grid">
         <div class="contact">
           <p class="contact__role">Master's Program Director</p>
           <h3>Jonathan Shidal</h3>
@@ -600,34 +600,34 @@
       </div>
     </section>
 
-    <!-- EXPLORE -->
-    <section id="explore" class="sec">
+    <!-- ---------- Explore More Programs ---------- -->
+    <section id="explore" class="section">
       <h2>Explore More Programs</h2>
-      <div class="explore">
-        <a class="ex ex--feature" href="https://sever.washu.edu/degree-programs/cybersecurity/index.html">
-          <span class="ex__tag">Sever Institute · Part-time</span>
-          <span class="ex__t">Master of Cybersecurity Management</span>
-          <span class="ex__d">A 30-unit, part-time program for working professionals. The curriculum covers how to protect, defend, respond to and recover from cyber threats.</span>
-          <span class="ex__go" aria-hidden="true"><svg class="i-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+      <div class="explore-grid">
+        <a class="explore-card explore-card--featured" href="https://sever.washu.edu/degree-programs/cybersecurity/index.html">
+          <span class="explore-card__tag">Sever Institute · Part-time</span>
+          <span class="explore-card__title">Master of Cybersecurity Management</span>
+          <span class="explore-card__text">A 30-unit, part-time program for working professionals. The curriculum covers how to protect, defend, respond to and recover from cyber threats.</span>
+          <span class="explore-card__arrow" aria-hidden="true"><svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
         </a>
-        <a class="ex" href="https://cse.washu.edu/academics/graduate/index.html"><span class="ex__tag">CSE</span><span class="ex__t">All CSE graduate programs</span><span class="ex__go" aria-hidden="true"><svg class="i-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a>
-        <a class="ex" href="https://engineering.washu.edu/academics/dual-degree-program/index.html"><span class="ex__tag">McKelvey</span><span class="ex__t">Dual Degree Program</span><span class="ex__go" aria-hidden="true"><svg class="i-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a>
-        <a class="ex" href="https://cse.washu.edu/academics/graduate/current-students/PhD-Students.html"><span class="ex__tag">CSE</span><span class="ex__t">PhD students</span><span class="ex__go" aria-hidden="true"><svg class="i-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a>
+        <a class="explore-card" href="https://cse.washu.edu/academics/graduate/index.html"><span class="explore-card__tag">CSE</span><span class="explore-card__title">All CSE graduate programs</span><span class="explore-card__arrow" aria-hidden="true"><svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a>
+        <a class="explore-card" href="https://engineering.washu.edu/academics/dual-degree-program/index.html"><span class="explore-card__tag">McKelvey</span><span class="explore-card__title">Dual Degree Program</span><span class="explore-card__arrow" aria-hidden="true"><svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a>
+        <a class="explore-card" href="https://cse.washu.edu/academics/graduate/current-students/PhD-Students.html"><span class="explore-card__tag">CSE</span><span class="explore-card__title">PhD students</span><span class="explore-card__arrow" aria-hidden="true"><svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a>
       </div>
     </section>
 
   </div>
 </div>
 
-<!-- APPLY BAND -->
-<section class="band" aria-label="Apply">
-  <div class="wrap band__row">
+<!-- ==================== Closing apply band ==================== -->
+<section class="apply-band" aria-label="Apply">
+  <div class="wrap apply-band__row">
     <div>
-      <p class="band__h">Engineer the systems the world trusts.</p>
-      <p class="band__sub" id="bandSub">Applications are open now.</p>
+      <p class="apply-band__heading">Engineer the systems the world trusts.</p>
+      <p class="apply-band__note" id="apply-band-note">Applications are open now.</p>
     </div>
-    <div class="band__actions">
-      <a class="btn btn--white" href="https://gradadmit.wustl.edu/apply/?sr=4503835c-76a0-44d8-b086-00f19e2bb810">Apply now</a>
+    <div class="apply-band__actions">
+      <a class="btn btn--light" href="https://gradadmit.wustl.edu/apply/?sr=4503835c-76a0-44d8-b086-00f19e2bb810">Apply now</a>
       <a class="btn btn--outline-light" href="https://gradadmit.wustl.edu/register/Web-Inquiry">Request info</a>
     </div>
   </div>
@@ -635,21 +635,21 @@
 
 </main>
 
-<!-- ============ FOOTER ============ -->
+<!-- ==================== Footer ==================== -->
 <footer class="footer">
   <div class="wrap footer__grid">
     <div class="footer__col footer__brand">
       <a href="https://washu.edu" class="footer__logo"><img src="https://engineering.washu.edu/_files/images/WashU-RGB.svg" alt="Washington University in St. Louis" width="200" height="47"></a>
-      <h2 class="footer__h">Contact Us</h2>
+      <h2 class="footer__heading">Contact Us</h2>
       <p><a href="https://washu.edu/">Washington University in St. Louis</a><br>
         <a href="https://engineering.washu.edu/">McKelvey School of Engineering</a><br>
         <a href="https://cse.washu.edu/">Computer Science &amp; Engineering</a></p>
       <address>MSC: 1045-213-1010J<br>1 Brookings Drive<br>St. Louis, MO 63130-4899</address>
       <p>Undergrad info: <a href="tel:314-935-6160">314-935-6160</a><br>Grad info: <a href="tel:314-935-6132">314-935-6132</a></p>
-      <a class="footer__btn" href="https://engineering.washu.edu/about/contact-us.html">Contact Us</a>
+      <a class="footer__button" href="https://engineering.washu.edu/about/contact-us.html">Contact Us</a>
     </div>
     <div class="footer__col">
-      <h2 class="footer__h">Engineering Departments</h2>
+      <h2 class="footer__heading">Engineering Departments</h2>
       <ul>
         <li><a href="https://bme.washu.edu/">Biomedical Engineering</a></li>
         <li><a href="https://cse.washu.edu/">Computer Science &amp; Engineering</a></li>
@@ -661,7 +661,7 @@
       </ul>
     </div>
     <div class="footer__col">
-      <h2 class="footer__h">Resources</h2>
+      <h2 class="footer__heading">Resources</h2>
       <ul>
         <li><a href="https://mycanvas.wustl.edu/">Canvas</a></li>
         <li><a href="https://engineering.washu.edu/about/school-organization/directory.html">Directory</a></li>
@@ -674,7 +674,7 @@
     </div>
   </div>
   <div class="wrap footer__base">
-    <ul class="social" aria-label="McKelvey Engineering on social media">
+    <ul class="social-links" aria-label="McKelvey Engineering on social media">
       <li><a href="https://www.facebook.com/washuengineering">Facebook</a></li>
       <li><a href="https://x.com/WashUengineers">X</a></li>
       <li><a href="https://www.linkedin.com/school/washu-engineering">LinkedIn</a></li>
@@ -688,7 +688,7 @@
   </div>
 </footer>
 
-<a class="mobile-apply" href="https://gradadmit.wustl.edu/apply/?sr=4503835c-76a0-44d8-b086-00f19e2bb810">Apply now <svg class="i-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+<a class="mobile-apply" href="https://gradadmit.wustl.edu/apply/?sr=4503835c-76a0-44d8-b086-00f19e2bb810">Apply now <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
 
 <script src="script.js"></script>
 </body>

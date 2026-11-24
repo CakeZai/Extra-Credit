@@ -35,6 +35,15 @@ Extra Credit/
 
 `script.java` is an empty leftover file and isn't used by the site.
 
+## Code conventions
+
+- **CSS class names use [BEM](https://getbem.com/naming/):** `block__element--modifier`, written in full words (`faculty-card__name`, `course--elective`, `btn--primary`).
+- **`is-*` classes are states** that `script.js` adds and removes (`is-open`, `is-active`, `is-on`, `is-visible`, `is-hidden`). They are never used for base styling.
+- **IDs are kebab-case** (`unit-count`, `faq-list`) and exist only for in-page links, ARIA references and JavaScript hooks.
+- **`style.css` is ordered** as tokens → base → layout → components (in page order) → responsive (1080px → 920px → 720px) → reduced motion. Colors, fonts and spacing come from the CSS custom properties in `:root`.
+- **`script.js` is plain JavaScript in one IIFE**, split into numbered, commented blocks (one per feature), with `const` names that describe what they hold.
+- **HTML comments** label each major region (`==== Header ====`) and each content section (`---- Courses ----`). Open questions are marked `TODO:`.
+
 ## What's on the page
 
 | Section | What it does |
