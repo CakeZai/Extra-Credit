@@ -100,7 +100,7 @@
       <a class="brand__department" href="https://cse.washu.edu/">Computer Science &amp; Engineering</a>
     </div>
     <button class="menu-button" aria-expanded="false" aria-controls="main-nav">
-      <span class="menu-button__bars" aria-hidden="true"></span><span class="menu-button__text">Menu</span>
+      <span class="menu-button__bars" aria-hidden="true"></span><span>Menu</span>
     </button>
   </div>
   <nav class="main-nav" id="main-nav" aria-label="Department">
@@ -118,7 +118,7 @@
 <!-- ==================== Hero ==================== -->
 <section class="hero" aria-labelledby="page-title">
   <div class="wrap hero__inner">
-    <div class="hero__copy" data-enter>
+    <div data-enter>
       <nav class="breadcrumbs" aria-label="Breadcrumb">
         <a href="https://cse.washu.edu/academics/index.html">Academics</a>
         <span aria-hidden="true">/</span>
@@ -145,7 +145,7 @@
       <div><dt>Electives</dt><dd>6 <small class="facts__note">of 11 offered</small></dd></div>
       <div><dt>Study</dt><dd>Full-time <small class="facts__note">or part-time</small></dd></div>
       <div><dt>Full-time tuition</dt><dd><a class="facts__link" href="#tuition">$34,595</a> <small class="facts__note">per semester</small></dd></div>
-      <div><dt>Fall deadline</dt><dd class="facts__date">Mar 1 <small class="facts__note">full-time</small></dd></div>
+      <div><dt>Fall deadline</dt><dd class="facts__date">Mar 1 <small class="facts__note">full-time · early Dec. 31</small></dd></div>
       <div><dt>Spring deadline</dt><dd class="facts__date">Oct 1 <small class="facts__note">full-time</small></dd></div>
     </dl>
   </div>
@@ -256,40 +256,40 @@
         <div class="planner__header">
           <p class="planner__count"><strong id="unit-count">12</strong> / 30 units planned</p>
           <div class="number-toggle" role="group" aria-label="Course number format">
-            <button type="button" class="is-on" data-num="new" aria-pressed="true">Current numbers</button>
-            <button type="button" data-num="old" aria-pressed="false">Pre-Fall 2025</button>
+            <button type="button" class="is-selected" data-format="new" aria-pressed="true">Current numbers</button>
+            <button type="button" data-format="old" aria-pressed="false">Pre-Fall 2025</button>
           </div>
         </div>
-        <div class="unitbar" aria-hidden="true">
-          <span class="unitbar__segment unitbar__segment--core" style="flex:6">Core<span class="unitbar__count">&nbsp;· 6</span></span>
-          <span class="unitbar__segment unitbar__segment--electives" style="flex:18"><span class="unitbar__fill" id="elective-fill"></span><span class="unitbar__label" id="elective-label">Electives · 0 / 18</span></span>
-          <span class="unitbar__segment unitbar__segment--capstone" style="flex:6">Capstone<span class="unitbar__count">&nbsp;· 6</span></span>
+        <div class="unit-bar" aria-hidden="true">
+          <span class="unit-bar__segment unit-bar__segment--core">Core<span class="unit-bar__count">&nbsp;· 6</span></span>
+          <span class="unit-bar__segment unit-bar__segment--electives"><span class="unit-bar__fill" id="elective-fill"></span><span class="unit-bar__label" id="elective-label">Electives · 0 / 18</span></span>
+          <span class="unit-bar__segment unit-bar__segment--capstone">Capstone<span class="unit-bar__count">&nbsp;· 6</span></span>
         </div>
       </div>
 
       <h3 class="group-heading">Core Courses <span>required · 6 units</span></h3>
-      <div class="course-grid course-grid--required">
-        <article class="course course--core">
+      <ul class="course-grid course-grid--required">
+        <li class="course course--core">
           <span class="course__number" data-new="CSE 4303" data-old="CSE 433S">CSE 4303</span>
           <span class="course__title">Introduction to Computer Security</span>
           <span class="course__units">3 units</span>
-        </article>
-        <article class="course course--core">
+        </li>
+        <li class="course course--core">
           <span class="course__number" data-new="CSE 5203" data-old="CSE 523S">CSE 5203</span>
           <span class="course__title">Systems Security</span>
           <span class="course__units">3 units</span>
-        </article>
-      </div>
+        </li>
+      </ul>
 
       <h3 class="group-heading">Program Electives <span>choose six · 18 units</span></h3>
       <div class="elective-filters" role="group" aria-label="Filter electives by topic">
-        <button type="button" class="filter-chip is-on" data-filter="all" aria-pressed="true">All 11</button>
+        <button type="button" class="filter-chip is-selected" data-filter="all" aria-pressed="true">All 11</button>
         <button type="button" class="filter-chip" data-filter="systems" aria-pressed="false">Systems</button>
         <button type="button" class="filter-chip" data-filter="networks" aria-pressed="false">Networks</button>
         <button type="button" class="filter-chip" data-filter="privacy" aria-pressed="false">Privacy &amp; Web</button>
         <button type="button" class="filter-chip" data-filter="crypto" aria-pressed="false">Crypto &amp; AI</button>
       </div>
-      <div class="course-grid course-grid--electives" id="electives">
+      <div class="course-grid" id="electives">
         <button type="button" class="course course--elective" data-tags="privacy" aria-pressed="false"><span class="course__number" data-new="CSE 4103" data-old="CSE 413A">CSE 4103</span><span class="course__title">Web Privacy and Security</span><span class="course__units">3 units</span></button>
         <button type="button" class="course course--elective" data-tags="systems" aria-pressed="false"><span class="course__number" data-new="CSE 4202" data-old="CSE 422S">CSE 4202</span><span class="course__title">Operating Systems Organization</span><span class="course__units">3 units</span></button>
         <button type="button" class="course course--elective" data-tags="systems" aria-pressed="false"><span class="course__number" data-new="CSE 4304" data-old="CSE 434S">CSE 4304</span><span class="course__title">Reverse Engineering and Malware Analysis</span><span class="course__units">3 units</span></button>
@@ -305,13 +305,13 @@
       <p class="planner__message" id="planner-message" role="status" aria-live="polite"></p>
 
       <h3 class="group-heading">Culminating Experience <span>6 units</span></h3>
-      <div class="course-grid course-grid--required">
-        <article class="course course--capstone">
+      <ul class="course-grid course-grid--required">
+        <li class="course course--capstone">
           <span class="course__number" data-new="CSE 7998" data-old="CSE 598/599">CSE 7998</span>
           <span class="course__title">Master's Capstone</span>
           <span class="course__units">6 units required, typically completed over two semesters</span>
-        </article>
-      </div>
+        </li>
+      </ul>
       <p class="fine-print">Course numbers changed in Fall 2025. Switch to “Pre-Fall 2025” above to see the earlier numbers. For schedules, see <a href="https://cse.washu.edu/academics/course-offerings.html">Course Offerings</a>.</p>
     </section>
 
@@ -413,7 +413,7 @@
     <section id="next-term" class="section">
       <h2>Next Start Term</h2>
       <div class="next-term">
-        <div class="next-term__main">
+        <div>
           <p class="next-term__label">Next full-time deadline</p>
           <p class="next-term__name" id="next-term-name">Fall 2027</p>
           <p class="next-term__type" id="next-term-type">Early decision</p>
@@ -425,15 +425,15 @@
       </div>
 
       <div class="table-scroll">
-        <table class="data-table data-table--deadlines">
+        <table class="data-table data-table--deadlines" role="table">
           <caption>Master's application deadlines (11:59 p.m. Eastern)</caption>
-          <thead><tr><th scope="col">Entry term</th><th scope="col">Opens</th><th scope="col">Deadline</th><th scope="col">Decision by</th><th scope="col">Reply by</th></tr></thead>
-          <tbody>
-            <tr><th scope="row">Fall, full-time (early decision)</th><td data-label="Opens">Sept. 1</td><td data-label="Deadline"><strong>Dec. 31</strong></td><td data-label="Decision by">Jan. 31</td><td data-label="Reply by">—</td></tr>
-            <tr><th scope="row">Fall, full-time</th><td data-label="Opens">Sept. 1</td><td data-label="Deadline"><strong>March 1</strong></td><td data-label="Decision by">March 31</td><td data-label="Reply by">May 1</td></tr>
-            <tr><th scope="row">Spring, full-time</th><td data-label="Opens">March 1</td><td data-label="Deadline"><strong>Oct. 1</strong></td><td data-label="Decision by">Oct. 15</td><td data-label="Reply by">Nov. 1</td></tr>
-            <tr><th scope="row">Fall, part-time*</th><td data-label="Opens">Sept. 1</td><td data-label="Deadline"><strong>July 15</strong></td><td data-label="Decision by">Aug. 1</td><td data-label="Reply by">Aug. 10</td></tr>
-            <tr><th scope="row">Spring, part-time*</th><td data-label="Opens">July 1</td><td data-label="Deadline"><strong>Dec. 1</strong></td><td data-label="Decision by">Dec. 15</td><td data-label="Reply by">Jan. 5</td></tr>
+          <thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Entry term</th><th scope="col" role="columnheader">Opens</th><th scope="col" role="columnheader">Deadline</th><th scope="col" role="columnheader">Decision by</th><th scope="col" role="columnheader">Reply by</th></tr></thead>
+          <tbody role="rowgroup">
+            <tr role="row"><th scope="row" role="rowheader">Fall, full-time (early decision)</th><td role="cell" data-label="Opens">Sept. 1</td><td role="cell" data-label="Deadline"><strong>Dec. 31</strong></td><td role="cell" data-label="Decision by">Jan. 31</td><td role="cell" data-label="Reply by">—</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">Fall, full-time</th><td role="cell" data-label="Opens">Sept. 1</td><td role="cell" data-label="Deadline"><strong>March 1</strong></td><td role="cell" data-label="Decision by">March 31</td><td role="cell" data-label="Reply by">May 1</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">Spring, full-time</th><td role="cell" data-label="Opens">March 1</td><td role="cell" data-label="Deadline"><strong>Oct. 1</strong></td><td role="cell" data-label="Decision by">Oct. 15</td><td role="cell" data-label="Reply by">Nov. 1</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">Fall, part-time*</th><td role="cell" data-label="Opens">Sept. 1</td><td role="cell" data-label="Deadline"><strong>July 15</strong></td><td role="cell" data-label="Decision by">Aug. 1</td><td role="cell" data-label="Reply by">Aug. 10</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">Spring, part-time*</th><td role="cell" data-label="Opens">July 1</td><td role="cell" data-label="Deadline"><strong>Dec. 1</strong></td><td role="cell" data-label="Decision by">Dec. 15</td><td role="cell" data-label="Reply by">Jan. 5</td></tr>
           </tbody>
         </table>
       </div>
@@ -456,8 +456,7 @@
       <h2>Featured Faculty</h2>
       <p>Faculty in the department's Security and Privacy research area.</p>
       <!-- NOTE: The department doesn't publish who teaches in this MS program. These faculty are listed on the CSE "Security and Privacy" research-area page; titles come from the CSE faculty directory. -->
-      <!-- TODO: add instructor ratings / "who teaches what" if the department publishes it. -->
-      <div class="faculty-rail" id="faculty-list" tabindex="0" aria-label="Faculty, scrollable">
+      <div class="faculty-rail" id="faculty-list" role="region" tabindex="0" aria-label="Faculty, scrollable">
         <a class="faculty-card" href="https://engineering.washu.edu/faculty/Ning-Zhang.html"><span class="faculty-card__photo"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Ning-Zhang.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="faculty-card__name">Ning Zhang</span><span class="faculty-card__title">Associate Professor</span></a>
         <a class="faculty-card" href="https://engineering.washu.edu/faculty/Umar-Iqbal.html"><span class="faculty-card__photo"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Umar-Iqbal.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="faculty-card__name">Umar Iqbal</span><span class="faculty-card__title">Assistant Professor</span></a>
         <a class="faculty-card" href="https://engineering.washu.edu/faculty/Yevgeniy-Vorobeychik.html"><span class="faculty-card__photo"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Eugene-Vorobeychik.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="faculty-card__name">Yevgeniy Vorobeychik</span><span class="faculty-card__title">Professor</span></a>
@@ -468,8 +467,8 @@
         <a class="faculty-card" href="https://engineering.washu.edu/faculty/Nathan-Jacobs.html"><span class="faculty-card__photo"><img loading="lazy" src="https://ik.imagekit.io/mckelvey/faculty/Nathan-Jacobs1.jpg?tr=w-400,h-460,fo-face,q-60" alt=""></span><span class="faculty-card__name">Nathan Jacobs</span><span class="faculty-card__title">Vice Provost &amp; Professor</span></a>
       </div>
       <div class="faculty-rail__controls">
-        <button type="button" class="faculty-rail__button" data-dir="-1" aria-label="Scroll faculty left"><svg class="icon-arrow icon-arrow--left" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button>
-        <button type="button" class="faculty-rail__button" data-dir="1" aria-label="Scroll faculty right"><svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button>
+        <button type="button" class="faculty-rail__button" data-direction="-1" aria-label="Scroll faculty left"><svg class="icon-arrow icon-arrow--left" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button>
+        <button type="button" class="faculty-rail__button" data-direction="1" aria-label="Scroll faculty right"><svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button>
         <a class="arrow-link" href="https://cse.washu.edu/faculty-research/research-areas/Cybersecurity.html">All Security &amp; Privacy faculty <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </div>
     </section>
@@ -531,15 +530,14 @@
     <section id="faqs" class="section">
       <h2>FAQs</h2>
       <button type="button" class="expand-all" aria-controls="faq-list" aria-expanded="false">Expand all</button>
-      <div class="accordion accordion--faq" id="faq-list">
+      <div class="accordion" id="faq-list">
         <details>
           <summary>Who is this master's degree for?</summary>
           <div class="accordion__body"><p>Students who want to design, engineer and architect cybersecurity technology and systems. You'll need a programming foundation equivalent to CSE 1301 (Introduction to Computer Science) and CSE 2407 (Data Structures and Algorithms). If you're a working professional focused on managing security rather than engineering it, compare the <a href="#explore">Master of Cybersecurity Management</a>.</p></div>
         </details>
         <details>
           <summary>How long does the program take?</summary>
-          <div class="accordion__body"><p>The degree is 30 units. The 6-unit capstone is typically completed over two semesters. Full-time tuition covers 9–21 units per semester.</p>
-          <!-- TODO: the department does not publish a typical time-to-degree. Add it here, e.g. "Most full-time students finish in X semesters." --></div>
+          <div class="accordion__body"><p>The degree is 30 units. The 6-unit capstone is typically completed over two semesters. Full-time tuition covers 9–21 units per semester.</p></div>
         </details>
         <details>
           <summary>Can I study part-time?</summary>
@@ -593,7 +591,7 @@
           <ul>
             <li><a href="https://cse.washu.edu/academics/graduate/current-students/Resources-for-Current-Masters-Students.html">Resources for Current Master's Students</a></li>
             <li><a href="https://cse.washu.edu/documents/CSE-Department-Masters-Program-Handbook.pdf">Master's Program Handbook (PDF)</a></li>
-            <li><a href="http://bulletin.wustl.edu/grad/engineering/">Graduate Bulletin</a></li>
+            <li><a href="https://bulletin.wustl.edu/grad/engineering/">Graduate Bulletin</a></li>
             <li><a href="https://engineering.washu.edu/academics/academic-calendar.html">Academic Calendar</a></li>
           </ul>
         </div>
@@ -623,7 +621,7 @@
 <section class="apply-band" aria-label="Apply">
   <div class="wrap apply-band__row">
     <div>
-      <p class="apply-band__heading">Engineer the systems the world trusts.</p>
+      <h2 class="apply-band__heading">Engineer the systems the world trusts.</h2>
       <p class="apply-band__note" id="apply-band-note">Applications are open now.</p>
     </div>
     <div class="apply-band__actions">
@@ -638,7 +636,7 @@
 <!-- ==================== Footer ==================== -->
 <footer class="footer">
   <div class="wrap footer__grid">
-    <div class="footer__col footer__brand">
+    <div>
       <a href="https://washu.edu" class="footer__logo"><img src="https://engineering.washu.edu/_files/images/WashU-RGB.svg" alt="Washington University in St. Louis" width="200" height="47"></a>
       <h2 class="footer__heading">Contact Us</h2>
       <p><a href="https://washu.edu/">Washington University in St. Louis</a><br>
@@ -648,7 +646,7 @@
       <p>Undergrad info: <a href="tel:314-935-6160">314-935-6160</a><br>Grad info: <a href="tel:314-935-6132">314-935-6132</a></p>
       <a class="footer__button" href="https://engineering.washu.edu/about/contact-us.html">Contact Us</a>
     </div>
-    <div class="footer__col">
+    <div>
       <h2 class="footer__heading">Engineering Departments</h2>
       <ul>
         <li><a href="https://bme.washu.edu/">Biomedical Engineering</a></li>
@@ -660,7 +658,7 @@
         <li><a href="https://sever.washu.edu/">Sever Institute – professional degrees</a></li>
       </ul>
     </div>
-    <div class="footer__col">
+    <div>
       <h2 class="footer__heading">Resources</h2>
       <ul>
         <li><a href="https://mycanvas.wustl.edu/">Canvas</a></li>

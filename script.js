@@ -18,16 +18,24 @@
   const selectAll = (selector, root = document) => Array.from(root.querySelectorAll(selector));
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /** Set an element's text only if it exists, so one missing element never stops the script. */
+  const setText = (selector, text) => {
+    const element = select(selector);
+    if (element) element.textContent = text;
+  };
+
 
   /* ---------- 1. Mobile menu ---------- */
   const menuButton = select(".menu-button");
   const mainNav = select("#main-nav");
 
-  menuButton.addEventListener("click", () => {
-    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-    menuButton.setAttribute("aria-expanded", String(!isOpen));
-    mainNav.classList.toggle("is-open", !isOpen);
-  });
+  if (menuButton && mainNav) {
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      mainNav.classList.toggle("is-open", !isOpen);
+    });
+  }
 
 
   /* ---------- 2. "On this page" navigation ----------
@@ -37,21 +45,24 @@
   const tocPanel = select("#toc-list");
   const tocCurrentLabel = select("#toc-current");
   const tocLinks = selectAll(".toc ol a");
-  const tocSections = tocLinks.map(link => select(link.getAttribute("href")));
+  const tocSections = tocLinks.map(link => select(link.getAttribute("href"))).filter(Boolean);
+  const hasToc = Boolean(tocToggle && tocPanel && tocCurrentLabel && tocSections.length);
 
   const closeToc = () => {
     tocToggle.setAttribute("aria-expanded", "false");
     tocPanel.classList.remove("is-open");
   };
 
-  tocToggle.addEventListener("click", () => {
-    const isOpen = tocToggle.getAttribute("aria-expanded") === "true";
-    tocToggle.setAttribute("aria-expanded", String(!isOpen));
-    tocPanel.classList.toggle("is-open", !isOpen);
-  });
-  tocLinks.forEach(link => link.addEventListener("click", closeToc));
-  document.addEventListener("click", event => { if (!event.target.closest(".toc")) closeToc(); });
-  document.addEventListener("keydown", event => { if (event.key === "Escape") closeToc(); });
+  if (hasToc) {
+    tocToggle.addEventListener("click", () => {
+      const isOpen = tocToggle.getAttribute("aria-expanded") === "true";
+      tocToggle.setAttribute("aria-expanded", String(!isOpen));
+      tocPanel.classList.toggle("is-open", !isOpen);
+    });
+    tocLinks.forEach(link => link.addEventListener("click", closeToc));
+    document.addEventListener("click", event => { if (!event.target.closest(".toc")) closeToc(); });
+    document.addEventListener("keydown", event => { if (event.key === "Escape") closeToc(); });
+  }
 
   /** Mark the link for `sectionId` as current, in the sidebar and the phone bar. */
   const setActiveSection = sectionId => {
@@ -69,6 +80,7 @@
 
   /** The current section is the last one whose top has passed 30% of the screen. */
   const updateActiveSection = () => {
+    if (!hasToc) return;
     const triggerLine = window.innerHeight * 0.3;
     let currentSection = tocSections[0];
     for (const section of tocSections) {
@@ -83,12 +95,15 @@
   const MAX_ELECTIVES = 6;
   const UNITS_PER_COURSE = 3;
   const REQUIRED_UNITS = 12; // 6 core + 6 capstone
+  const ELECTIVE_UNITS = MAX_ELECTIVES * UNITS_PER_COURSE;  // 18
+  const TOTAL_UNITS = REQUIRED_UNITS + ELECTIVE_UNITS;      // 30
 
   const electiveCards = selectAll(".course--elective");
   const unitCount = select("#unit-count");
   const electiveFill = select("#elective-fill");
   const electiveLabel = select("#elective-label");
   const plannerMessage = select("#planner-message");
+  const hasPlanner = Boolean(electiveCards.length && unitCount && electiveFill && electiveLabel && plannerMessage);
 
   const countSelectedElectives = () =>
     electiveCards.filter(card => card.getAttribute("aria-pressed") === "true").length;
@@ -99,30 +114,35 @@
 
     unitCount.textContent = REQUIRED_UNITS + selected * UNITS_PER_COURSE;
     electiveFill.style.width = (selected / MAX_ELECTIVES) * 100 + "%";
-    electiveLabel.textContent = "Electives · " + selected * UNITS_PER_COURSE + " / 18";
+    electiveLabel.textContent = "Electives · " + selected * UNITS_PER_COURSE + " / " + ELECTIVE_UNITS;
 
     plannerMessage.classList.remove("is-warn");
-    if (selected === MAX_ELECTIVES) plannerMessage.textContent = "That's 30 units — a complete degree plan.";
+    if (selected === MAX_ELECTIVES) plannerMessage.textContent = "That's " + TOTAL_UNITS + " units — a complete degree plan.";
     else if (selected === 0) plannerMessage.textContent = "";
     else plannerMessage.textContent = remaining + " more elective" + (remaining === 1 ? "" : "s") + " to go.";
   };
 
-  electiveCards.forEach(card => card.addEventListener("click", () => {
-    const isSelected = card.getAttribute("aria-pressed") === "true";
+  if (hasPlanner) {
+    electiveCards.forEach(card => {
+      // Remove the shake class when it finishes, so the next blocked pick can replay it.
+      card.addEventListener("animationend", () => card.classList.remove("is-shake"));
 
-    // Block a seventh pick: explain why and give the card a short shake.
-    if (!isSelected && countSelectedElectives() >= MAX_ELECTIVES) {
-      plannerMessage.textContent = "You've already picked six electives. Remove one first.";
-      plannerMessage.classList.add("is-warn");
-      card.classList.remove("is-shake");
-      void card.offsetWidth; // restart the shake animation
-      card.classList.add("is-shake");
-      return;
-    }
+      card.addEventListener("click", () => {
+        const isSelected = card.getAttribute("aria-pressed") === "true";
 
-    card.setAttribute("aria-pressed", String(!isSelected));
-    updatePlanner();
-  }));
+        // Block a pick beyond the limit: explain why and give the card a short shake.
+        if (!isSelected && countSelectedElectives() >= MAX_ELECTIVES) {
+          plannerMessage.textContent = "You've already picked " + MAX_ELECTIVES + " electives. Remove one first.";
+          plannerMessage.classList.add("is-warn");
+          card.classList.add("is-shake");
+          return;
+        }
+
+        card.setAttribute("aria-pressed", String(!isSelected));
+        updatePlanner();
+      });
+    });
+  }
 
 
   /* ---------- 4a. Elective topic filters ---------- */
@@ -131,7 +151,7 @@
   filterChips.forEach(chip => chip.addEventListener("click", () => {
     filterChips.forEach(other => {
       const isChosen = other === chip;
-      other.classList.toggle("is-on", isChosen);
+      other.classList.toggle("is-selected", isChosen);
       other.setAttribute("aria-pressed", String(isChosen));
     });
 
@@ -148,28 +168,30 @@
   numberButtons.forEach(button => button.addEventListener("click", () => {
     numberButtons.forEach(other => {
       const isChosen = other === button;
-      other.classList.toggle("is-on", isChosen);
+      other.classList.toggle("is-selected", isChosen);
       other.setAttribute("aria-pressed", String(isChosen));
     });
 
     // Each course number stores both versions: data-new and data-old.
-    const format = button.dataset.num;
+    const format = button.dataset.format;
     selectAll(".course__number").forEach(number => { number.textContent = number.dataset[format]; });
   }));
 
 
   /* ---------- 5. Faculty photo rail: arrow buttons scroll one card ---------- */
   const facultyList = select("#faculty-list");
-  const CARD_GAP = 16; // matches the rail's gap in style.css
 
-  selectAll(".faculty-rail__button").forEach(button => button.addEventListener("click", () => {
-    const firstCard = facultyList.querySelector(".faculty-card");
-    const step = firstCard ? firstCard.getBoundingClientRect().width + CARD_GAP : 260;
-    facultyList.scrollBy({
-      left: step * Number(button.dataset.dir),
-      behavior: prefersReducedMotion ? "auto" : "smooth"
-    });
-  }));
+  if (facultyList) {
+    selectAll(".faculty-rail__button").forEach(button => button.addEventListener("click", () => {
+      const firstCard = facultyList.querySelector(".faculty-card");
+      const cardGap = parseFloat(getComputedStyle(facultyList).columnGap) || 0; // read from style.css, never duplicated
+      const step = firstCard ? firstCard.getBoundingClientRect().width + cardGap : facultyList.clientWidth;
+      facultyList.scrollBy({
+        left: step * Number(button.dataset.direction),
+        behavior: prefersReducedMotion ? "auto" : "smooth"
+      });
+    }));
+  }
 
 
   /* ---------- 6. FAQ: expand / collapse all ---------- */
@@ -215,15 +237,11 @@
   const nextDeadline = deadlines.find(deadline => deadline.date >= today);
   if (nextDeadline) {
     const daysLeft = Math.ceil((nextDeadline.date - today) / DAY_IN_MS);
-    select("#next-term-name").textContent = nextDeadline.term;
-    select("#next-term-type").textContent = nextDeadline.type;
-    select("#next-term-days").textContent = daysLeft;
-    select("#next-term-date").textContent = "Apply by " + nextDeadline.label + ", " + nextDeadline.date.getFullYear();
-
-    const applyBandNote = select("#apply-band-note");
-    if (applyBandNote) {
-      applyBandNote.textContent = nextDeadline.term + " applications are open. Apply by " + nextDeadline.label + ".";
-    }
+    setText("#next-term-name", nextDeadline.term);
+    setText("#next-term-type", nextDeadline.type);
+    setText("#next-term-days", daysLeft);
+    setText("#next-term-date", "Apply by " + nextDeadline.label + ", " + nextDeadline.date.getFullYear());
+    setText("#apply-band-note", nextDeadline.term + " applications are open. Apply by " + nextDeadline.label + ".");
   }
 
 
@@ -234,6 +252,7 @@
   const applyBand = select(".apply-band");
 
   const updateMobileApplyBar = () => {
+    if (!mobileApplyBar || !hero || !applyBand) return;
     const scrolledPastHero = hero.getBoundingClientRect().bottom < 0;
     const applyBandInView = applyBand.getBoundingClientRect().top < window.innerHeight;
     mobileApplyBar.classList.toggle("is-visible", scrolledPastHero && !applyBandInView);
