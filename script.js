@@ -14,36 +14,6 @@
     mainnav.classList.toggle("is-open", !open);
   });
 
-  /* ---------- Hero terminal ---------- */
-  const term = $("#termBody");
-  const lines = [
-    ['<span class="p">$</span> cse degree --program ms-cybersecurity', 0],
-    ['<span class="k">loading McKelvey School of Engineering…</span> <span class="g">ok</span>', 1],
-    ["", 1],
-    ['<span class="k">units     </span> 30', 1],
-    ['<span class="k">core      </span> CSE 4303 · CSE 5203', 1],
-    ['<span class="k">electives </span> 6 of 11', 1],
-    ['<span class="k">capstone  </span> CSE 7998 (project | thesis)', 1],
-    ['<span class="k">min_gpa   </span> 2.70', 1],
-    ["", 1],
-    ['<span class="p">$</span> apply --term fall', 0]
-  ];
-  // The summary is already in the HTML, so the hero never shows an empty frame.
-  // With motion allowed, only the closing command is typed out once.
-  if (!reduceMotion) {
-    const last = lines[lines.length - 1][0];
-    const prompt = '<span class="p">$</span> ';
-    const text = last.replace(prompt, "");
-    const base = lines.slice(0, -1).map(l => l[0]).join("\n") + "\n" + prompt;
-    let c = 0;
-    term.innerHTML = base + '<span class="cursor"></span>';
-    const tick = () => {
-      term.innerHTML = base + text.slice(0, c) + '<span class="cursor"></span>';
-      if (c++ < text.length) setTimeout(tick, 45);
-    };
-    setTimeout(tick, 900);
-  }
-
   /* ---------- On-this-page: mobile toggle + scrollspy ---------- */
   const tocToggle = $(".toc__toggle");
   const tocPanel = $("#tocList");
