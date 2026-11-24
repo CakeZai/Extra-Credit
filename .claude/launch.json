@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "site",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd /private/tmp/claude-501/-Users-maryashleybarredo-Downloads-Fall-26-Web-Dev-Extra-Credit-/387be7ad-4f79-4fb5-9ce1-ea40ee717554/scratchpad/site && exec python3 -m http.server 8123"],
+      "port": 8123
+    }
+  ]
+}
