@@ -625,3 +625,7 @@ p { margin: 0 0 1em; }
 }
 @media (max-width: 920px) { .hero__link { min-height: 44px; } }
 @media (max-width: 720px) { .hero__actions .btn { width: 100%; justify-content: center; } }
+
+/* accuracy disclaimer at the very bottom */
+.footer__disclaimer { margin: 20px 0 0; padding: 14px 16px; border: 1px solid #3a3735; border-radius: var(--radius); font-size: 13.5px; line-height: 1.55; color: #cfc9c0; max-width: 90ch; }
+.footer__disclaimer strong { color: #fff; }
