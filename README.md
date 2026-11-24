@@ -28,21 +28,20 @@ Extra Credit/
 ├── style.css                       All styles, including the phone and tablet layouts
 ├── script.js                       Interactive features (no libraries)
 ├── images/
-│   └── students-cybersecurity.jpg  Hero photo (WashU CSE's own program photo)
+│   └── students-cybersecurity.jpg  Hero photo, 1200px, 59 KB (WashU CSE's own program photo)
 ├── README.md                       This file
 └── CONTRIBUTORS.md                 Who made this, and tools used
 ```
 
-`script.java` is an empty leftover file and isn't used by the site.
-
 ## Code conventions
 
 - **CSS class names use [BEM](https://getbem.com/naming/):** `block__element--modifier`, written in full words (`faculty-card__name`, `course--elective`, `btn--primary`).
-- **`is-*` classes are states** that `script.js` adds and removes (`is-open`, `is-active`, `is-on`, `is-visible`, `is-hidden`). They are never used for base styling.
-- **IDs are kebab-case** (`unit-count`, `faq-list`) and exist only for in-page links, ARIA references and JavaScript hooks.
+- **`is-*` classes are states**: `script.js` adds and removes `is-open`, `is-active`, `is-selected`, `is-visible`, `is-hidden`, `is-warn` and `is-shake`; `is-current` marks the current page in the main navigation.
+- **IDs and data attributes are kebab-case** (`unit-count`, `faq-list`, `data-format`, `data-direction`). IDs exist only for in-page links, ARIA references and JavaScript hooks.
+- **Colors come from tokens.** Every repeated color is a named custom property in `:root` (for example `--red-on-dark`, `--text-on-dark`).
 - **`style.css` is ordered** as tokens → base → layout → components (in page order) → responsive (1080px → 920px → 720px) → reduced motion. Colors, fonts and spacing come from the CSS custom properties in `:root`.
 - **`script.js` is plain JavaScript in one IIFE**, split into numbered, commented blocks (one per feature), with `const` names that describe what they hold.
-- **HTML comments** label each major region (`==== Header ====`) and each content section (`---- Courses ----`). Open questions are marked `TODO:`.
+- **HTML comments** label each major region (`==== Header ====`) and each content section (`---- Courses ----`). Open content questions are listed under [Known limitations](#known-limitations) rather than left in the markup.
 
 ## What's on the page
 
@@ -99,6 +98,7 @@ Facts were checked against these official sources on **November 24, 2026**. That
 - **No program-specific career data:** WashU doesn't publish outcomes for this program alone, so the Careers section uses national BLS figures, labeled as such.
 - **Dates go stale:** info session dates, tuition and the scholarship year are for the 2026–27 cycle and need updating each year. The deadline countdown updates itself.
 - Faculty photos, the logo and the favicon load from WashU's servers, so they won't show offline.
+- **Not published by the department:** a typical time to degree, and which faculty teach in this program. The Featured Faculty section lists the Security & Privacy research area instead.
 
 ## Credits
 
